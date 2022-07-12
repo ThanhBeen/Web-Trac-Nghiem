@@ -1,0 +1,71 @@
+<div class="container my-5" id="content" >
+    <div class="row" ng-show="!inProgess">
+        <div class="col text-center">
+            <h3 style="color: darkslategrey; font-family:'Times New Roman', Times, serif; font-weight: bold;">
+                Start the Quiz</h3>
+            <button class="btn btn-primary" ng-click="start()" style="font-family:'Times New Roman', Times, serif; font-weight: bold;">Start</button>
+        </div>
+    </div>
+
+    <div ng-show="inProgess">
+
+        <div class="row" ng-show="quizOver">
+            <div class="col text-center">
+                <h3 style="color: red; font-family:'Times New Roman', Times, serif; font-weight: bold;" >Quiz is Over</h3>
+                <button class="btn btn-primary" ng-click="reset()"
+                style="font-family:'Times New Roman', Times, serif; font-weight: bold;">Play again</button>
+            </div>
+        </div>
+
+        <div ng-show="!quizOver" class="pt-0">
+            <div class="row">
+                <div class="row" style="margin-top: 20px; width: 1140px;">
+                    <div class="col text-center" ng-controller="countDown">
+                        <h1><i class="fas fa-clock" style="color: #23B5E1;"></i> {{phut}}:{{giay}}</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card border-info">
+                        <div class="card-header text-white" style="background-color: #23B5E1; font-weight: bold;">
+                            <i class="fas fa-list"></i>  <span>{{subjectName}}</span>
+                            <span class="float-right badge badge-dark" style="padding: .28em .7em;">{{id}}/10</span>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="card-text" style="font-weight: 500;">{{id}}. {{question}}
+                                <hr>
+                                <div class="form-check" ng-repeat="o in options">
+
+                                    <label class="form-check-label" for="Radios1">
+                                        <input class="form-check-input" type="radio" name="answer" value="{{o.Id}}">
+                                        {{o.Text}}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div >
+                                <button ng-show="answerMode" class="btn btn-primary" ng-click="checkAnswer()">
+                                    Submit</button>
+                                <span class="badge badge-success float-right" 
+                                style="margin: 7px; font-size: 90%; font-weight: 500;">Điểm:
+                                {{score}}/10</span>
+                            </div>
+                            <div ng-show="!answerMode">
+                                <button class="btn btn-primary" ng-click=nextQuestion()>Next</button>
+                                <span ng-show="correctAns">Correct</span>
+                                <span ng-show="!correctAns">Sorry, Incorrect</span>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

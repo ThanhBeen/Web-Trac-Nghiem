@@ -1,0 +1,80 @@
+<section class="row">
+    <article class="col-9 mt-4" style="text-align: center;">
+        <!-- <div class="card float-left m-3" style="width: 243px; height: 270px;" 
+        ng-repeat="o in products  | limitTo : 6 : begin">
+            <div class="card-body">
+                <img src="/images/logos/{{o.Logo}}" class="img-fluid">
+            </div>
+            <div class="card-footer">
+                {{o.Name}}
+                
+            </div>
+        </div> -->
+        <div class="col-6 subjects-item float-left"  ng-repeat="o in products  | limitTo : 10 : begin">
+            <div class="subjects-item-image">
+                <img src="images/logos/{{o.Logo}}" width="130px">
+            </div>
+            <div class="subjects-item-text">
+                <div class="subjects-item-text-main">
+                    <div>
+                        <div>{{o.Name}}</div>
+                        <div class="subjects-item-title-subtext">Welcome to the subject</div>
+                    </div>
+                    <a class="btn btn-primary-gradient" href="#!quiz/{{o.Id}}/{{o.Name}}" role="button">
+                      Start Test</a>
+                </div>
+            </div>
+        </div>  
+
+        <div class="card">
+            <ul class="pagination justify-content-center">
+                <li ng-click="first()" class="page-item mr-1"><a style="border-radius: 10px;"
+                        class="page-link">
+                        <i class="far fa-hand-point-up"></i></a></li>
+                <li ng-click="previous()" class="page-item mr-1"><a style="border-radius: 10px;"
+                        class="page-link">
+                        <i class="far fa-hand-point-left"></i></a></li>
+                <li ng-click="next()" class="page-item mr-1"><a style="border-radius: 10px;"
+                        class="page-link">
+                        <i class="far fa-hand-point-right"></i></a></li>
+                <li ng-click="last()" class="page-item"><a style="border-radius: 10px;"
+                        class="page-link" >
+                        <i class="far fa-hand-point-down"></i></a></li>
+            </ul>
+
+            
+            <!-- <div class="box" style="margin-left: 305px; margin-top: 30px;">
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="height: 40px;">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button style="font-size: 15px; font-weight: bold;" class="btn btn-secondary"
+                      ng-click="first()">First</button>
+                    <button style="font-size: 15px; font-weight: bold;" class="btn btn-secondary"
+                      ng-click="prev()">Prev</button>
+                    <button style="font-size: 15px; font-weight: bold;" class="btn btn-secondary"
+                      ng-click="next()">Next</button>
+                    <button style="font-size: 15px; font-weight: bold;" class="btn btn-secondary"
+                      ng-click="last()">Last</button>
+                  </div>
+                </div>
+              </div> -->
+                    
+                
+        </div>
+
+    </article>
+
+    <aside class="col-3">
+        <div class="poly-cart mt-4">
+            <div class="card md-2">
+                <div class="card-header">
+                    <i class="fas fa-list"></i>
+                    <strong> Danh Mục Môn Học</strong>
+                </div>
+                <ul class="list-group" ng-repeat="o in products">
+                    <li class="list-group-item">{{o.Name}}</li>
+
+                </ul>
+            </div>
+        </div>
+    </aside>
+</section>

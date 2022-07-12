@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Thiết kế Header và Footer</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- <script src="https://kit.fontawesome.com/3fa82e3737.js" crossorigin="anonymous"></script> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="angular-1.8.2/angular.min.js"></script>   
+    <script src="angular-1.8.2/angular-route.min.js"></script>
+    <script src="jss/index.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3fa82e3737.js" crossorigin="anonymous"></script>
+    <style>
+      .container-fluid,
+      .container-lg,
+      .container-md,
+      .container-sm,
+      .container-xl {
+          width: 100%;
+          padding-right: 0px;
+          padding-left: 0px;
+          margin-right: auto;
+          margin-left: auto;
+      }
+
+      @media (min-width: 1200px) {
+          .container {
+              max-width: 1170px;
+          }
+      }
+
+      body {
+          background-color: #f6f6f6;
+          
+      }
+
+
+
+      a:hover {
+          color: #23B5E1 !important;
+      }
+
+      .navbar li a {
+          display: block;
+          padding: 13px 20px 11px;
+          margin: 0px;
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: #2c2c2c;
+          border: 2px solid transparent;
+          position: relative;
+      }
+
+      .navbar .home {
+          border: 2px solid #201c1d;
+          border-radius: 3px;
+      }
+
+      .navbar .home a:focus,
+      .navbar .home a:hover {
+          color: #2c2c2c !important;
+      }
+
+      .dropdown-item.active,
+      .dropdown-item:active {
+          color: #fff !important;
+          background-color: #23B5E1 !important;
+      }
+
+      .sticky {
+          position: fixed;
+          top: 0;
+          z-index: 1 !important;
+          width: 100%;
+          box-shadow: 0 3px 10px 0 rgba(115, 143, 147, 0.3);
+      }
+
+      .sticky2 {
+          padding-top: 4.313rem;
+      }
+
+
+      .spacer {
+          height: 6px;
+          width: 49px;
+          background-color: #23B5E1;
+      }
+
+      .subjects h2 {
+          font-size: 42px;
+          font-weight: 300;
+          line-height: 1.52;
+          margin-top: 24px;
+          margin-bottom: 40px;
+      }
+
+      .subjects-item {
+          margin-bottom: 40px;
+          border-radius: 4px;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: stretch;
+          min-height: 200px;
+          position: relative;
+      }
+
+      .subjects-item-image {
+          width: 200px;
+          background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+          flex-shrink: 0;
+      }
+
+      .subjects-item-text {
+          background-color: #fff;
+          padding: 30px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          flex-grow: 1;
+      }
+
+      .subjects-item-text-main {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-grow: 1;
+      }
+
+      .subjects-item-title-subtext {
+          font-size: 12px;
+          line-height: 18px;
+          opacity: .5;
+          margin-top: 4px;
+      }
+
+
+      .btn-primary-gradient {
+          text-transform: uppercase;
+          padding: 13px 21px;
+          border: none;
+          font-size: 15px;
+          font-weight: 400;
+          letter-spacing: 1.25px;
+          font-stretch: normal;
+          background: linear-gradient(153deg, #45dbf2, #23B5E1);
+          color: #fff;
+
+      }
+
+      .btn-primary-gradient:hover {
+          color: #fff !important;
+          background: linear-gradient(153deg, #007bff, #45dbf2);
+      }
+
+      .grad:hover {
+          color: #343a40 !important;
+          background-color: transparent !important;
+          border-color: #343a40;
+      }
+
+
+      .footer {
+          padding-top: 50px;
+          padding-bottom: 50px;
+          color: #99979c;
+          background-color: #2a2730;
+          margin-top: 30px;
+      }
+
+      .footer a {
+          color: white;
+      }
+
+      .footer a:focus,
+      .footer a:hover {
+          color: white !important;
+          text-decoration: underline !important;
+      }
+
+      .footer p {
+          margin-bottom: 0rem !important;
+      }
+  </style>
+  </head>
+  <body ng-app="myApp">
+    
+      <div class="container" >
+          <header class="row"> 
+               <img src="images/banner.png " style="width: 100%; color:  wheat;" class="img-fluid">
+         </header>
+
+          <nav class="row"> 
+            <nav class="navbar navbar-expand-lg navbar-gray bg-white col">
+              <div class="container-fluid">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#!/trangChu"><i class="fas fa-home"></i> FPT Polytechnic</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#!/gioiThieu"><i class="fas fa-list"></i> Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#!/lienHe"><i class="fas fa-phone-square-alt"></i> Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#!/gopY"><i class="fas fa-envelope"></i> Góp ý</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#!/hoiDap"><i class="fas fa-question-circle"></i> Hỏi đáp</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#!/monHoc"><i class="fas fa-list-alt"></i> Môn học</a>
+                    </li>
+                    
+                  </ul>
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user"></i> Tài khoản
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!/dangKy">Đăng ký</a></li>
+                        <li><a class="dropdown-item" href="#!/dangNhap">Đăng nhập </a></li>
+                        <li><a class="dropdown-item" href="#">Quên mật khẩu </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#!/dangNhap">Đăng xuất</a></li>
+                        <li><a class="dropdown-item" href="#!/doiMK">Đổi mật khẩu</a></li>
+                        <li><a class="dropdown-item" href="#!/capNhatTK">Cập nhật tài khoản</a></li>
+                      </ul>
+                    </li>
+                  </ul> 
+                </div>
+              </div>     
+            </nav>
+          </nav>
+
+          <ng-view> </ng-view> 
+
+          <footer class="row" > 
+            <div class="card col">
+              <div class="card-body">
+                <p>FPT Polytechnic &copy; 2022, All right revered</p>
+              </div>
+          </div>
+           </footer>
+
+      </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+  </body>
+</html>

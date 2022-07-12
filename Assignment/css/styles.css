@@ -1,0 +1,15 @@
+.gioiThieu{
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-bottom: 1px dotted gray;
+}
+
+.content{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+input.ng-invalid{
+    background-color: yellow;
+}

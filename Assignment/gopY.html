@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Thiết kế Header và Footer</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- <script src="https://kit.fontawesome.com/3fa82e3737.js" crossorigin="anonymous"></script> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/gopY.css">
+    <script src="angular-1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+
+  </head>
+  <body ng-app="">
+    
+
+ 
+          <section class="row">
+            <article class="col-12" style="text-align: center;">
+                <div class="mt-3">
+                  <div class="gioiThieu">
+                    Phản Hồi
+                  </div>
+                  <div style="color: gray; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="mt-2">
+                    Hãy phản hồi vấn đề bạn gặp phải với chúng tôi
+                  </div>
+                  
+                  <div class="mt-2 content">
+
+                  </div>
+                </div>
+            </article>
+            <div class="col-12">
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-capnhat" role="tabpanel" aria-labelledby="nav-capnhat-tab">
+                  <div class="card mt-1 m-4">
+                    
+                    <div class="card-body mx-4 mt-2">
+                        <form action="" name="frmGopY">
+                            <div class="row">
+                                <div class="form-group col-6">
+                                    <input required name="txtHoTen" ng-model="hoTen" type="password" type="text" class="form-control" placeholder="Họ tên">
+                                </div>
+                                <div class="form-group col-6">
+                                    <input required name="txtEmail" ng-model="Email" type="email" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="form-group col-12">
+                                  <input required name="txtChuDe" ng-model="chuDe" type="text" class="form-control" placeholder="Chủ đề">
+                              </div>
+                          </div>
+                            
+                            <div class="row">
+                                <div class="col">
+                                    <textarea required name="txtNoiDung" ng-model="noiDung" cols="30" rows="5" class="form-control" 
+                                    placeholder="Chúng tôi có thể giúp gì cho bạn?"></textarea>
+                                </div>
+                                
+                            </div>
+                            <div class="row mt-3">
+                                <div class="form-group col text-center">
+                                    <button type="submit" class="btn btn-default">
+                                        <i class="fas fa-save"></i> Phản hồi
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+        
+                    </div>
+                    
+                </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+  </body>
+</html>
